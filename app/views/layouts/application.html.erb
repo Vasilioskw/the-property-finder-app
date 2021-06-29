@@ -13,7 +13,7 @@
 
   </head>
   <body>
-  <% if ["public", "device"].includes?(controller.controller_name) %>
+  <% if ["public", "device"].include?(controller.controller_name) %>
 
     <header>
       <%= render "layouts/nav/public" %>
