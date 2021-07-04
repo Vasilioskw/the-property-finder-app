@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   
   <body>
-  <% if ["public", "device"].include?(controller.controller_name) %>
+  <% if ["public","device"].include?(controller.controller_name) %>
     <header>
       <%= render "layouts/nav/public" %>
-    </header>
-  <% else %>
-    <%= render "layouts/nav/dashboard" %>
-  <% end %>
+      <%= yield %>
+    </header>    
+    <% else %>
+      <%= render "layouts/nav/dashboard" %>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <%= render "layouts/nav/sidebar" %>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <%= yield %>
+    </main>
+  </div>
+</div> 
+<% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-       
-    <%= yield %>
 
-    <%= render "layouts/footer" %>
+    <%# Will fix: <%= render "layouts/footer" %> %>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>  
