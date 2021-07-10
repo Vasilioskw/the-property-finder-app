@@ -22,6 +22,7 @@ class PropertiesController < ApplicationController
   # POST /properties or /properties.json
   def create
     @property = Property.new(property_params)
+    @property.accout_id = current_account.id
 
     respond_to do |format|
       if @property.save
