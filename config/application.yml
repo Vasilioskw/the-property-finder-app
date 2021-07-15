@@ -1,5 +1,12 @@
-cloud:
- aws:
-   credentials:
-     access-key: KEY
-     secret-key: SECRET
+require_relative '.s3_keys.rb'
+
+   development: &defaults
+   AWS_ACCESS_KEY_ID: S3_ACCESS_KEY
+   AWS_SECRET_ACCESS_KEY: S3_SECRET_KEY
+test:
+  <<: *defaults
+
+# Do not keep production secrets in the repository,
+# instead read values from the environment.
+production:
+  <<: *defaults
