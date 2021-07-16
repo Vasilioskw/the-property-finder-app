@@ -37,3 +37,4 @@
 yarn-debug.log*
 .yarn-integrity
 .s3_keys.rb
+Aws.config
