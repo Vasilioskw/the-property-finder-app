@@ -24,10 +24,10 @@
   <div class="form-group">
     <%= form.label :photo %>
     <%= form.file_field :photo, class: "form-control" %>
-    <%= form.hidden_field :photo_cashe %>
+    <%# <%= form.hidden_field :photo_cashe %> %>
 
     <% if @property.photo.present? %>
-      <%= image_tag @property.photo.thumb.url%>
+      <%= image_tag @property.photo%> %>
      <% end %>
   </div>
 

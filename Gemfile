@@ -20,13 +20,13 @@ gem 'jbuilder', '~> 2.7'
 
 gem "devise"
 
-# image uploads to Amazon S3
-gem 'carrierwave', '~> 2.0'
-gem 'fog', '~> 1.37.0'
+# # image uploads to Amazon S3
+# gem 'carrierwave', '~> 2.0', require: false
+# gem 'fog', '~> 1.37.0', require: false
 
-gem 'aws-sdk', '~> 3'
-gem 'aws-sdk-rails', '~> 3'
-gem 'aws-sdk-s3', '~> 1'
+gem 'aws-sdk', '~> 3', require: false
+gem 'aws-sdk-rails', '~> 3', require: false
+gem 'aws-sdk-s3', '~> 1', require: false
 
 
 # Use Active Storage variant
