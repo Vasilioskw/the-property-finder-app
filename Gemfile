@@ -19,6 +19,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem "devise"
+gem 'mini_magick'
+gem "ImageResize", "~> 0.0.5"
+
 
 # # image uploads to Amazon S3
 # gem 'carrierwave', '~> 2.0', require: false

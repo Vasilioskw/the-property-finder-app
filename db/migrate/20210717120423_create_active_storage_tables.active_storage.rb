@@ -5,10 +5,10 @@ class DeviseCreateAccounts < ActiveRecord::Migration[6.1]
     create_table :accounts do |t|
       ## Database authenticatable
       t.string :first_name,         null: false, default: ""
-      t.string :last_name,           null: false, default: ""
+      t.string :last_name,          null: false, default: ""
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-      t.string :url, default: ""
+      t.string :url
 
 
       ## Recoverable
@@ -53,11 +53,12 @@ class CreateProperties < ActiveRecord::Migration[6.1]
     create_table :properties do |t|
       t.references :account
       t.string :name
+      t.string :address
       t.integer :price
       t.integer :rooms
       t.integer :bathrooms
       t.string :photo
-      # t.string :photo_cashe
+      # t.string :photo_cache
 
       t.timestamps
     end

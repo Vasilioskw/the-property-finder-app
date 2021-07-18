@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2021_07_17_120423) do
   create_table "properties", force: :cascade do |t|
     t.bigint "account_id"
     t.string "name"
+    t.string "address"
     t.integer "price"
     t.integer "rooms"
     t.integer "bathrooms"
