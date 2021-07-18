@@ -1,15 +1,21 @@
 <% @properties.each do |property| %>
 <div class="col-12">
-<div style="width:90%;height:90%;">
+<%# <div style="width:90%;height:90%;"> %>
 
 <%= property_thumbnail property %>
     <h3 class="h5"><%= property.name %></h3>
     <p><%= property.address %></p>
+    <div class="amenities">
+        <span><i data-feather="users"></i></span>
+        <span><i data-feather="users"></i></span>
+        <span><i data-feather="users"></i></span>   
 
     <h2>Heading</h2>
     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+    <br/>
+    <br/>
 
-</div>
+    </div>
 
 <% end %>
