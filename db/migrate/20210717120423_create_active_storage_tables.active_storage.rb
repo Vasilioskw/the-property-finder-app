@@ -57,7 +57,7 @@ class CreateProperties < ActiveRecord::Migration[6.1]
       t.integer :rooms
       t.integer :bathrooms
       t.string :photo
-      # t.string :photo_cashe
+      # t.string :photo_cache
 
       t.timestamps
     end

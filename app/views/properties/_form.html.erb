@@ -10,7 +10,7 @@
     <%= form.label :price %>
     <%= form.number_field :price, class: "form-control" %>
   </div>
-
+  
   <div class="form-group">
     <%= form.label :rooms %>
     <%= form.number_field :rooms, class: "form-control" %>
@@ -27,7 +27,7 @@
     <%# <%= form.hidden_field :photo_cache %>
 
     <% if @property.photo.present? %>
-      <%= image_tag @property.photo, class: "mt-4" %>
+      <%= image_tag attachment_url(:photo, :fill, 200, 200), class: "mt-4" %>
      <% end %>
   </div>
 
