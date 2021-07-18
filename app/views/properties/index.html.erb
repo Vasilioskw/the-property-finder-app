@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Address</th>
       <th>Price</th>
       <th>Rooms</th>
       <th>Bathrooms</th>
@@ -15,6 +16,7 @@
     <% @properties.each do |property| %>
       <tr>
         <td><%= property.name %></td>
+        <td><%= property.address %></td>
         <td><%= property.price %></td>
         <td><%= property.rooms %></td>
         <td><%= property.bathrooms %></td>
