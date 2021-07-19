@@ -2,8 +2,8 @@
 <div class="col-12">
 <%# <div style="width:90%;height:90%;"> %>
 
-<%= property_thumbnail property %>
-    <h3 class="h5"><%= property.name %></h3>
+<%= link_to(property_thumbnail(property), property_path(property)) %>
+    <h3 class="h5 mt-3"><%= link_to property.name, property_path(property) %></h3>
     <p><%= property.address %></p>
     
     <div class="amenities">

@@ -1,25 +1,49 @@
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
-<p>
-  <strong>address:</strong>
-  <%= @property.address %>
-</p>
+<%# <%= property_photo_url(@property) %> 
 
-<p>
-  <strong>Price:</strong>
-  <%= @property.price %>
-</p>
 
-<p>
-  <strong>Rooms:</strong>
-  <%= @property.rooms %>
-</p>
+<div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
+  <div photo-overlay>
 
-<p>
-  <strong>Bathrooms:</strong>
-  <%= @property.bathrooms %>
-</p>
+<%# <%= property_photo_url(@property) %> 
+  </div>
+</div>
 
-<%= link_to 'Edit Property', edit_property_path(@property), class: "btn btn-success" %> |
+<div class="container">
+<div class="row">
+<div class="col-8">
+  <p>
+      <strong>Name:</strong>
+      <%= @property.name %>
+    </p>
+    <p>
+      <strong>address:</strong>
+      <%= @property.address %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= @property.price %>
+    </p>
+
+    <p>
+      <strong>Rooms:</strong>
+      <%= @property.rooms %>
+    </p>
+
+    <p>
+      <strong>Bathrooms:</strong>
+      <%= @property.bathrooms %>
+    </p>
+
+</div>
+
+    <div class="col-4">
+      <%= render "properties/agent_details" %>
+            <%= render "properties/agent_details" %>
+            <%# <%= render "properties/agent_details" %>
+
+</div>
+
+<%# <%= link_to 'Edit Property', edit_property_path(@property), class: "btn btn-success" %> 
+
+</div>
