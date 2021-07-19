@@ -13,13 +13,14 @@
 
   </head>
   
-  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
-  <% if ["public","device","sessions"].include?(controller.controller_name) %>
-    <header>
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %> <%= "show-sidebar" if @show_sidebar.present? %>">
+  <% if @show_sidebar.nil? %>    
+      <header>
       <%= render "layouts/nav/public" %>
-      <%= yield %>
-    </header>    
-    <% else %>
+      </header>    
+
+    <%= yield %>
+  <% else %>
       <%= render "layouts/nav/dashboard" %>
   
   <div class="container-fluid">
@@ -33,9 +34,9 @@
 <% end %>
 
 
-    <%# <%= render "layouts/footer" %> %>
+    <%# <%= render "layouts/footer" %> 
 
-<div> id="notifications"><%= notice %> </div>
+<%# <div> id="notifications"><%= notice %> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>  
