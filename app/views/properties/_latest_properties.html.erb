@@ -1,4 +1,5 @@
 <% @properties.each do |property| %>
+<<<<<<< HEAD
 <div class="col-4" style="padding: 20px;">
     <%# <div style="width:90%;height:90%;"> %>
     <%= link_to(property_thumbnail(property), property_path(property)) %>
@@ -19,5 +20,26 @@
     </div>
 </div>
  
+=======
+<div class="col-12">
+<%# <div style="width:90%;height:90%;"> %>
+
+<%= link_to(property_thumbnail(property), property_path(property)) %>
+    <h3 class="h5 mt-3"><%= link_to property.name, property_path(property) %></h3>
+    <p><%= property.address %></p>
+    
+    <div class="amenities">
+        <span><i data-feather="users"></i></span>
+        <span><i data-feather="users"></i></span>
+        <span><i data-feather="users"></i></span>   
+
+    <h2>Heading</h2>
+    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+    <br/>
+    <br/>
+
+    </div>
+>>>>>>> ddd0d1cd71d5a3df549a62cc335bf87749387aa2
 
 <% end %>
