@@ -5,7 +5,6 @@ class Property < ApplicationRecord
     
     belongs_to :account
 
-self
 
     scope :latest, -> { order created_at: :desc }
 
