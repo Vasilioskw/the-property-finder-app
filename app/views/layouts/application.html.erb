@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThePropertyFinderApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+
+  </head>
+  
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %> <%= "show-sidebar" if @show_sidebar.present? %>">
+  <% if @show_sidebar.nil? %>    
+      <header>
+      <%= render "layouts/nav/public" %>
+      </header>    
+
+    <%= yield %>
+  <% else %>
+      <%= render "layouts/nav/dashboard" %>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <%= render "layouts/nav/sidebar" %>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-4">
+      <%= yield %>
+    </main>
+  </div>
+</div> 
+<% end %>
+
+
+    <%# <%= render "layouts/footer" %> 
+
+<%# <div> id="notifications"><%= notice %> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script>feather.replace()</script>
+  </body>
+</html>

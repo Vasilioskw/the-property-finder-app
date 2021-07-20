@@ -1,0 +1,16 @@
+// Place all the styles related to the Properties controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.property-thumb{
+    height: 400px;
+    width: 400px;
+    // padding: 15px;
+    
+}
+
+.property-main-photo {
+    height: 650px;
+    background-size: cover;
+    margin-bottom: 40px;
+}
