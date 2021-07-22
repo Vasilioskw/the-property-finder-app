@@ -3,7 +3,6 @@
 <div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
   <div photo-overlay>
 
-<%# <%= property_photo_url(@property) %> 
   </div>
 </div>
 
@@ -15,19 +14,26 @@
           <p class="mb-0"><%= @property.address %> </p>
           <p class="h2">For Sale<p>
       </div>
-      <div class="col-6"> 
-        <%= @property.rooms%>
-      </div>
-      <div class="">
-        <%= @property.baths %>
-      </div>
-      <div class="">
-        <%= @property.parking_spaces %>
+
+      <div class="col-6 text-center bg-light p-3"> 
+        <div class="row">
+          <div class="col-4">
+            <p class="m-0"><strong>Rooms</strong></p>            
+            <span class="lead"><%= @property.rooms %></span>
+          </div>
+          <div class="col-4">
+            <p class="m-0"><strong>Bathrooms</strong></p>
+            <span class="lead"><%= @property.bathrooms %></span>
+          </div>
+          <div class="col-4">
+            <p class="m-0"><strong>Parking Spaces</strong></p>
+            <span class="lead"><%= @property.parking_spaces %></span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row"> 
       <div class="col"> 
-
         <p>
           <strong>Name:</strong>
           <%= @property.name %>
