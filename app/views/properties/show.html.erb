@@ -43,37 +43,17 @@
       <%# Change link %>
       </div>
     </div>
-    <div>   
     <div class="row">     
       <div class="col"> 
-
-     <p class="h3">Property Description</p>    
-
-        <p>
-          <strong>Name:</strong>
-          <%= @property.name %>
-        </p>
-        <p>
-          <strong>address:</strong>
-          <%= @property.address %>
-        </p>
-        <p>
-          <strong>Price:</strong>
-          <%= @property.price %>
-        </p>
-        <p>
-          <strong>Rooms:</strong>
-          <%= @property.rooms %>
-        </p>
-        <p>
-          <strong>Bathrooms:</strong>
-          <%= @property.bathrooms %>
-        </p>
+        <p class="h3"><%= @property.name%></p>
+        <p class="h5">Property Description</p>    
+         
+        <div id="prop-details">
+          <%= simple_format @property.details %>
+        </div>      
       </div>
     </div>
   </div>
-  </div>
-
   <div class="col-4">
     <%= render "properties/agent_details" %>
   </div>
