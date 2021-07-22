@@ -32,8 +32,23 @@
         </div>
       </div>
     </div>
-    <div class="row"> 
+    
+    <div class="row border-top border-bottom pt-4 pb-4 mt-5 mb-5"> 
+      <div class="col-6">
+      <strong><%= link_to "Est. Monthly Repayments of #{number_to_currency((@property.price / 360), precision: 0) }", "#", class: "text-success" %> </strong>
+      </div>
+
+      <div class="col-6 text-right">
+      <strong><%= link_to "Can I afford this property?","#", class: "text-success"%></strong>
+      <%# Change link %>
+      </div>
+    </div>
+    <div>   
+    <div class="row">     
       <div class="col"> 
+
+     <p class="h3">Property Description</p>    
+
         <p>
           <strong>Name:</strong>
           <%= @property.name %>
@@ -56,6 +71,7 @@
         </p>
       </div>
     </div>
+  </div>
   </div>
 
   <div class="col-4">
