@@ -24,7 +24,7 @@ Rails.start()
 ActiveStorage.start()
 
 
-const { environment } = require('@rails/webpacker')
+// const { environment } = require('@rails/webpacker')
 
 
 
