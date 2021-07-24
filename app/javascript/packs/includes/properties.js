@@ -1,6 +1,6 @@
 $(function(){
 var details = $("#details");
 
-details.toggle();
-console.log('test');
+    details.toggle();
+    console.log('test');
 });
