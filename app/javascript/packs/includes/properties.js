@@ -1,6 +1,8 @@
 $(function(){
-var details = $("#details");
 
-    details.toggle();
-    console.log('test');
+    $("#toggleDetails").on("click", function(){
+        var details = $("#prop-details");
+        details.toggleClass("open");
+
+    })
 });
