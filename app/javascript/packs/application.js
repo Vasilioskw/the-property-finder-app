@@ -5,29 +5,26 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 
-
-
-require("@rails/ujs").start()
+Rails.start()
+ActiveStorage.start()
 
 require("jquery");
-require("./includes/properties");
 
 var jQuery = require("jquery")
 global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
 require("bootstrap");
+require("./includes/properties");
+ 
 
-require(".includes/properties");
 
 
 
-Rails.start()
-ActiveStorage.start()
 
 
 // const { environment } = require('@rails/webpacker')
 
 
 
-module.exports = environment
+// module.exports = environment

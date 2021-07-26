@@ -11,6 +11,5 @@ class Account < ApplicationRecord
         end
 
        def company
-              "test company"
        end
 end
