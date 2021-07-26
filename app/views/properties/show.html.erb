@@ -31,7 +31,7 @@
     </div>
     <div class="row border-top border-bottom pt-4 pb-4 mt-5 mb-5"> 
       <div class="col-6">
-      <strong><%= link_to "Est. Monthly Repayments of #{number_to_currency((@property.price / 360), precision: 0) }", "#", class: "text-success" %> </strong>
+      <strong><%= link_to "Est. Monthly Repayments of #{ number_to_currency((@property.price - (@property.price * 0.1)) / 360, precision: 0) } *", "#", class: "text-success" %> </strong>
       </div>
       <div class="col-6 text-right">
       <strong><%= link_to "Can I afford this property?","#", class: "text-success"%></strong>
@@ -45,10 +45,10 @@
          
         <div id="prop-details" class="">
           <%= simple_format @property.details %>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div> 
 
         <button class="btn btn-outline mt-3" id="toggleDetails">Show more</button>
+        <p class="mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. shorter-term mortgages would require a higher monthly repayment.</p>
 
       </div>
     </div>
