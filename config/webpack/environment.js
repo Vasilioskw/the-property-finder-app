@@ -11,3 +11,5 @@ environment.plugins.prepend('Provide',
 )
 
 module.exports = environment
+
+export default environment
