@@ -6,10 +6,19 @@ class Account < ApplicationRecord
 
   has_many :properties
 
+
+
        def full_name
               "#{first_name} #{last_name}"
         end
 
        def company
        end
+
+has_one_attached :profile_picture
+    # has_one_attached :photo_cache
+    
+    belongs_to :account
+
 end
+
