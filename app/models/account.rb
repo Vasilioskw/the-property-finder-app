@@ -15,7 +15,7 @@ class Account < ApplicationRecord
        def company
        end
 
-has_one_attached :profile_picture
+has_one_attached :image
     # has_one_attached :photo_cache
     
     belongs_to :account
