@@ -1,6 +1,10 @@
 <div class="">
-    <%= @agent.profile_picture %>
-   <h3 class="h4"> <%= @agent.full_name %></h3>
+ <div class="form-group">
+    <% if @agent.image.present? %> 
+      <%= image_tag @agent.image, class: "mt-4" %>
+</div>   
+<% end %>
+<h3 class="h4"> <%= @agent.full_name %></h3>
     <p><%= @agent.company %></p>
     
     <button class="btn btn-info text-uppercase">Call</button>
