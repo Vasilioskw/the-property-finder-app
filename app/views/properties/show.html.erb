@@ -1,9 +1,14 @@
 <%# <%= property_photo_url(@property) %> 
+<head> 
+<script src="https://kit.fontawesome.com/65760553a2.js" crossorigin="anonymous"></script>
+</head>
 
+<body>
 <div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
   <div photo-overlay>
   </div>
 </div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-8"> 
@@ -15,15 +20,17 @@
       <div class="col-lg-6 text-center "> 
         <div class="row mr-lg-sm-3 mt-sm-3 bg-light p-3">
           <div class="col-4">
-            <p class="m-0"><strong>Rooms</strong></p>            
+            <p class="m-0"><strong><i class="fa fa-user"></i>Rooms</strong></p>            
             <span class="lead"><%= @property.rooms %></span>
           </div>
+          
           <div class="col-4">
             <p class="m-0"><strong>Bathrooms</strong></p>
             <span class="lead"><%= @property.bathrooms %></span>
           </div>
           <div class="col-4">
             <p class="m-0"><strong>Parking Spaces</strong></p>
+            <i class="fas fa-car"></i>
             <span class="lead"><%= @property.parking_spaces %></span>
           </div>
         </div>
@@ -57,3 +64,6 @@
     <%= render "properties/agent_details" %>
   </div>
 </div>
+
+</body>
+
