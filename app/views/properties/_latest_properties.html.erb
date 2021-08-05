@@ -3,16 +3,24 @@
 </head>
 
 <% @properties.each do |property| %>
-    <div class="col-4" style="padding: 20px;">
-        <%= link_to(property_thumbnail(property), property_path(property)) %>
-        <h3 class="h5 mt-3"><%= link_to property.name, property_path(property) %></h3>
-        <p><%= property.address %></p>
-        <div class="amenities">
-            <i class="fas fa-bed"></i> <%= property.rooms %>
-            <i class="fas fa-bath"></i> <%= property.bathrooms %>
-            <i class="fas fa-car"></i> <%= property.parking_spaces %>
-        </div>
+
+<div class="col-4">
+    <div class="property border">
+        
+        <div class="property-thumb" style="background-image: url(<%= property_thumbnail_url(property) %>)">
+            <%= link_to "", property_path(property) %>  
+        </div> 
+
+        <div class="property-summery p-3">
+            <h3 class="h5 mt-3"><%= link_to property.name, property_path(property), class: "text-dark" %></h3>
+
+            <span class="mr-2"><%= property.rooms %><i class="fas fa-bed text-muted ml-1"></i></span>
+            <span class="mr-2"><%= property.bathrooms %><i class="fas fa-bath text-muted ml-1"></i></span>
+            <span><%= property.parking_spaces %><i class="fas fa-car text-muted ml-1"></i></span>
+            
+            <p class="mb-2"><%= property.address %></p> 
+        </div>  
     </div>
- 
+</div>
 
 <% end %>
