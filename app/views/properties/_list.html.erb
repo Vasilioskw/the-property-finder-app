@@ -2,7 +2,7 @@
 <script src="https://kit.fontawesome.com/65760553a2.js" crossorigin="anonymous"></script>
 </head>
 
-<% @properties.each do |property| %>
+<% properties.each do |property| %>
 
 <div class="col-4">
     <div class="property border">
@@ -16,7 +16,7 @@
 
             <span class="mr-2"><%= property.rooms %><i class="fas fa-bed text-muted ml-1"></i></span>
             <span class="mr-2"><%= property.bathrooms %><i class="fas fa-bath text-muted ml-1"></i></span>
-            <span><%= property.parking_spaces %><i class="fas fa-car text-muted ml-1"></i></span>
+            <span ><%= property.parking_spaces %><i class="fas fa-car text-muted ml-1"></i></span>
             
             <p class="mb-2"><%= property.address %></p> 
         </div>  
