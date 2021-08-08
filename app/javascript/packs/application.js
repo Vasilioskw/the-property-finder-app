@@ -15,6 +15,13 @@ window.$ = window.jQuery = jQuery
 
 require("bootstrap");
 require("@fortawesome/fontawesome-free");
+
+import toastr from 'toaster';
+toastr.options = {
+    progressBar: true
+}
+global.toastr = toastr;
+
 require("./includes/properties");
 
 
