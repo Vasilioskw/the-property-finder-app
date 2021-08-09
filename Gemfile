@@ -23,6 +23,8 @@ gem 'mini_magick'
 gem "ImageResize", "~> 0.0.5"
 # gem 'rmagick'
 
+gem 'toastr-rails', '~> 1.0'
+
 # # image uploads to Amazon S3
 # gem 'carrierwave', '~> 2.0', require: false
 # gem 'fog', '~> 1.37.0', require: false
