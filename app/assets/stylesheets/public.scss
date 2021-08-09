@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 @import 'bootstrap/scss/bootstrap';
-
+    @import "toastr";
 #notifications {
+
     display: none;
 }
 
