@@ -4,4 +4,4 @@ const environment = require('./environment')
 
 module.exports = environment.toWebpackConfig()
 
-export default production
+// export default production
