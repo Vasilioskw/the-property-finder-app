@@ -2,13 +2,16 @@
   "name": "the-property-finder-app",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.9.2",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^5.1.0",
     "feather-icons": "^4.28.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
+    "toastr": "^2.1.4",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },

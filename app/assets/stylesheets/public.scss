@@ -2,11 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
+@import 'bootstrap/scss/bootstrap';
+    @import "toastr";
 #notifications {
+
     display: none;
 }
 
 body {
     padding-top: 56px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 100px;
+
 }
