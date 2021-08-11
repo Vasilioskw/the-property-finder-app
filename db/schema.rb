@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_130958) do
+ActiveRecord::Schema.define(version: 2021_08_11_120353) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_130958) do
     t.integer "parking_spaces", default: 0
     t.text "details"
     t.boolean "for_sale", default: true
+    t.datetime "available_date"
     t.index ["account_id"], name: "index_properties_on_account_id"
   end
 
