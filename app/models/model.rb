@@ -1,5 +1,5 @@
 class Model < ApplicationRecord
-    def img
-    attachment :photo
+    
+    has_one_attached :photo
 
 end
