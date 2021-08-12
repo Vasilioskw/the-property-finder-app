@@ -1,4 +1,4 @@
 class Model < ApplicationRecord
-    attachment :photo
-
+    attachment :photo :image
+    
 end
