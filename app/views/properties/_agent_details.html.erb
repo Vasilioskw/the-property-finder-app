@@ -1,7 +1,12 @@
-<div class="">
-   <h3 class="h4"><%= @agent.full_name %></h3>
+<div class="text-center border pt-4 pb-4 ml-lg-4">
+ <div class="mb-2">
+    <% if @agent.image.present? %> 
+      <%= image_tag @agent.image, class: "mt-4 profile-pic img-circle" %>
+</div>   
+<% end %>
+<h3 class="h4"> <%= @agent.full_name %></h3>
     <p><%= @agent.company %></p>
     
     <button class="btn btn-info text-uppercase">Call</button>
-    <button class="btn btn-success text-uppercase">Email for more details</button>
+    <button class="btn btn-success text-uppercase">Email</button>
 </div>
