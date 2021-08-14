@@ -4,7 +4,7 @@ class Account < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
-      has_many :properties
+      #has_many :properties
      # has_one_attached :image
 
 
@@ -19,7 +19,7 @@ class Account < ApplicationRecord
     def profile_picture
     end
 
-    has_one_attached :image
+    #has_one_attached :image
         # has_one_attached :photo_cache
         
     #     belongs_to :account
