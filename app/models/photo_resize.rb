@@ -1,4 +1,4 @@
-# class photoResize < ApplicationRecord
+ class photoResize < ApplicationRecord
 #     has_one_attached :photo
 #     validate :image_format
 #     def resize_image
@@ -24,4 +24,4 @@
 #         photo.purge
 #         errors.add(:photo, 'needs to be an image')
 #       end
-#     end
+     end
