@@ -1,4 +1,4 @@
- class photoResize < ApplicationRecord
+ class PhotoResize < ApplicationRecord
 #     has_one_attached :photo
 #     validate :image_format
 #     def resize_image
