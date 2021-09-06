@@ -2,25 +2,23 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
-require("@rails/ujs").start()
 
-// import Rails from "@rails/ujs"
-// import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-// import "channels"
-
-// Turbolinks.start()
-ActiveStorage.start()
+import * as ActiveStorage from "@rails/activestorage";
+import "@fortawesome/fontawesome-free";
+import "..assets/stylesheets/application"
 
 import "@fortawesome/fontawesome-free";
 import "..assets/stylesheets/application"
+
+require("@rails/ujs").start()
 
 var jQuery = require("jquery")
 global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
 require("bootstrap")
-require("@fortawesome/fontawesome-free")
+// require("@fortawesome/fontawesome-free")
+
 import "toastr";
 import toastr from 'toastr';
 toastr.options = {
@@ -48,8 +46,8 @@ require("./packs/includes/properties.js");
 
 
 
-const { environment } = require('@rails/webpacker')
+// const { environment } = require('@rails/webpacker')
 
 
-
-// module.exports = environment
+module.exports = environment
+// export default environment
