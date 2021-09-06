@@ -1,8 +1,5 @@
-<%# <%= property_photo_url(@property) %> 
 <head> 
-    
 <script src="https://kit.fontawesome.com/65760553a2.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -15,29 +12,31 @@
   <div class="row">
   <div class="col-sm-8"> 
     <div class="row">
-      <div class="col-lg-6"> 
-          <p class="mb-0"><%= @property.address %> </p>
-          <p class="h2 mb-3"> 
+      <div class="col-lg-6">
+        <p class="h4 mb-0"><%= @property.for_sale? ? "For Sale" : "For Rent" %></p>
+        <p class="mb-0"><%= @property.address %> </p>
+        <p class="h2 mb-3"> 
+          
           <% if @property.for_sale? %>
             <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) : "For Sale" %> 
           <% else %>
             <%= @property.price > 0 ? number_to_currency(@property.price, precision: 0) : "For Rent" %> / month
           <% end %>
-          </p>
+        </p>
       </div>
       <div class="col-lg-6 text-center "> 
         <div class="row mr-lg-sm-3 mt-sm-3 bg-light p-3">
           <div class="col-4">
-            <p class="m-0"><strong><i class="fa fa"></i>Rooms</strong></p>            
-            <span class="lead"><%= @property.rooms %></span>
+            <i class="fas fa-bed text-muted ml-1"></i>            
+            <span class="lead"><%= @property.rooms %> Bathrooms</span>
           </div>
           <div class="col-4">
-            <p class="m-0"><strong><i class="fa fa"></i>Bathrooms</strong></p>
-            <span class="lead"><%= @property.bathrooms %></span>
+            <i class="fas fa-bath text-muted ml-1"></i>
+            <span class="lead"><%= @property.bathrooms %> Bedrooms</span>
           </div>
           <div class="col-4">
-            <p class="m-0"><strong><i class="fa fa"></i>Parking Spaces</strong></p>
-            <span class="lead"><%= @property.parking_spaces %></span>
+            <i class="fas fa-car text-muted ml-1"></i>
+            <span class="lead"><%= @property.parking_spaces %> Parking</span>
           </div>
         </div>
       </div>
