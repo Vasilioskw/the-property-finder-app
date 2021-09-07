@@ -71,6 +71,9 @@
     </div>
     <div class="col-md-4">
       <%= render "properties/agent_details" %>
+
+    <iframe  class="ml-lg-4 mt-3" width="600" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=<%= ENV["GMAPS_API_KEY"] %>&q=<%= @property.address.to_param %>"> </iframe>
+      
     </div>
   </div>
 </div>
