@@ -22,7 +22,7 @@ gem "devise"
 gem 'mini_magick'
 gem "ImageResize", "~> 0.0.5"
 # gem 'rmagick'
-
+gem 'dotenv-rails'
 gem 'toastr-rails', '~> 1.0'
 
 # # image uploads to Amazon S3
