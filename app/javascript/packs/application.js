@@ -37,7 +37,7 @@ global.toastr = toastr;
 
 console.log("application.js working")
 
-require("./packs/includes/properties.js");
+require(".properties");
 
  
 
