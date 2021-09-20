@@ -1,5 +1,8 @@
 $(function(){
-
+    $("#show-tel").on("click", function(){
+        var $this = $(this);
+        $this.text( $this.data("telephone") );
+    });
     $("#toggleDetails").on("click", function(){
         var details = $("#prop-details");
         details.toggleClass("open");
