@@ -5,10 +5,7 @@
 
 import * as ActiveStorage from "@rails/activestorage";
 import "@fortawesome/fontawesome-free";
-import "..assets/stylesheets/application"
-
-import "@fortawesome/fontawesome-free";
-import "..assets/stylesheets/application"
+import "../../assets/stylesheets/application.scss";
 
 require("@rails/ujs").start()
 
@@ -37,7 +34,7 @@ global.toastr = toastr;
 
 console.log("application.js working")
 
-require(".properties");
+require("./includes/properties.js");
 
  
 

@@ -9,6 +9,8 @@
     "@rails/webpacker": "5.4.0",
     "bootstrap": "^5.1.1",
     "feather-icons": "^4.28.0",
+    "font-awesome": "^4.7.0",
+    "fortawesome": "^0.0.1-security",
     "jquery": "^3.6.0",
     "npm-install-missing": "^0.1.4",
     "popper.js": "^1.16.1",
