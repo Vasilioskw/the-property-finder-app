@@ -4,8 +4,8 @@
 // that code so it'll be compiled.
 
 import * as ActiveStorage from "@rails/activestorage";
-import "../../assets/stylesheets/application.scss";
-import '@fortawesome/fontawesome-free/js/all.js';
+// import "../../assets/stylesheets/application.scss";
+// import '@fortawesome/fontawesome-free/js/all.js';
 
 
 require("@rails/ujs").start()

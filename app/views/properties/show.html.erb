@@ -4,6 +4,7 @@
 
 <body>
 
+
 <div class="property-main-photo" style="background-image:url('<%= property_photo_url @property %>')">
   <div photo-overlay>
   </div>
@@ -60,7 +61,7 @@
         <p class="h3"><%= @property.name%></p>
         <p class="h5">Property Description</p>    
          
-          <%= javascript_pack_tag 'application' %>
+          <%# <%= javascript_pack_tag 'application' %> %>
           <div id="prop-details" class="">
             <%= simple_format @property.details %>
           </div> 
