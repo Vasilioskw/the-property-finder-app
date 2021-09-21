@@ -1726,6 +1726,11 @@
   "resolved" "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   "version" "1.0.0"
 
+"bootstrap-scss@^5.1.1":
+  "integrity" "sha512-yeOLV+82xlyqogjiWgfRycj8hqNizyLjfVLuLt91DDeWz5bs1dvAkgFnUlwqT7c2SqhSe+oqwvDmJS4uBh1YfQ=="
+  "resolved" "https://registry.npmjs.org/bootstrap-scss/-/bootstrap-scss-5.1.1.tgz"
+  "version" "5.1.1"
+
 "bootstrap@^5.1.1":
   "integrity" "sha512-/jUa4sSuDZWlDLQ1gwQQR8uoYSvLJzDd8m5o6bPKh3asLAMYVZKdRCjb1joUd5WXf0WwCNzd2EjwQQhupou0dA=="
   "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-5.1.1.tgz"
