@@ -1,7 +1,7 @@
 $(function(){
     $("#show-tel").on("click", function(){
         var $this = $(this);
-        $this.text( $this.data("telephone") );
+        $this.find("span").text( $this.data("telephone") );
     });
     $("#toggleDetails").on("click", function(){
         var details = $("#prop-details");
@@ -16,5 +16,11 @@ $(function(){
         }
             });
             });
+
+$('#contact-modal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var modal = $(this)
+
+})
 
 console.log("properties.js working")
