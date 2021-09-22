@@ -12,15 +12,13 @@ $(function(){
            console.log("show less")
         } else {
        $(this).text("Show more");
+        }    
+    });
 
-        }
-            });
-            });
-
-$('#contact-modal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var modal = $(this)
-
-})
+    $('#contact-modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var modal = $(this);
+    })
+});
 
 console.log("properties.js working")
