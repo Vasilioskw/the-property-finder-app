@@ -15,6 +15,8 @@ global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
 require("bootstrap")
+require ("jquery")
+
 // require("@fortawesome/fontawesome-free")
 
 import "toastr";
