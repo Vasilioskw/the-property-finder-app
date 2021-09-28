@@ -64,19 +64,14 @@ class PropertiesController < ApplicationController
 
   def email_agent
     # trigger email send
-    skip_before_action :verify_authenticity_token
     agent_id = params[:agent_id]
     first_name = params[:first_name]
     last_name = params[:last_name]
     email = params[:email]
     message = params[:message]
+  
+    ContactMailer.email_agent( agent_id, first_name, last_name, email, message )
     
-    logger.debug "agent: #(agent_id)"
-    logger.debug "First name: #(first_name)"
-    logger.debug "Last name: #(last_name)"
-    logger.debug "Email: #(email}"
-    logger.debug "message: #(message}"
-
     # response to script
     respond_to do |format| 
       format.json { head :no_content }
