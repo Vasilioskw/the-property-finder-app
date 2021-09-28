@@ -22,11 +22,17 @@ $(function(){
             email = $("#message-email").val(),
             message = $("#message-text").val();
                  
-        
+            $.ajaxSetup({
+                headers: {
+                  'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+                }
+              });
+
         $.ajax({    
             url: "/agent/message",
             method: 'POST',
             dataType: "json",
+              beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
             data: {
                 agent_id: agent_id,
                 first_name: first_name,

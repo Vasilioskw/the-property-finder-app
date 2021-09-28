@@ -3,7 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import ActiveStorage from "@rails/activestorage";
+import * as ActiveStorage from "@rails/activestorage";
 // import "../../assets/stylesheets/application.scss";
 // import '@fortawesome/fontawesome-free/js/all.js';
 
@@ -15,8 +15,7 @@ global.$ = global.jQuery = jQuery
 window.$ = window.jQuery = jQuery
 
 require("bootstrap")
-// require ("jquery")
-// require("railsujs")
+require ("jquery")
 
 // require("@fortawesome/fontawesome-free")
 

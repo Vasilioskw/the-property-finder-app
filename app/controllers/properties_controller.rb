@@ -69,13 +69,9 @@ class PropertiesController < ApplicationController
     last_name = params[:last_name]
     email = params[:email]
     message = params[:message]
+  
+    ContactMailer.email_agent( agent_id, first_name, last_name, email, message )
     
-    logger.debug "agent: #(agent_id)"
-    logger.debug "First name: #(first_name)"
-    logger.debug "Last name: #(last_name)"
-    logger.debug "Email: #(email}"
-    logger.debug "message: #(message}"
-
     # response to script
     respond_to do |format| 
       format.json { head :no_content }
