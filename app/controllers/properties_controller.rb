@@ -64,7 +64,6 @@ class PropertiesController < ApplicationController
 
   def email_agent
     # trigger email send
-    skip_before_action :verify_authenticity_token
     agent_id = params[:agent_id]
     first_name = params[:first_name]
     last_name = params[:last_name]
