@@ -68,7 +68,9 @@
 
           <button class="btn btn-outline-info mt-3" id="toggleDetails">Show more</button>
 
-          <p class="mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. shorter-term mortgages would require a higher monthly repayment.</p>
+          <% if @property.for_sale? %>
+            <p class="mt-5">* This rate is based on a 30 year mortgage, after paying an initial 10% down payment. shorter-term mortgages would require a higher monthly repayment.</p>
+          <% end %>
         </div>
       </div>
     </div>
